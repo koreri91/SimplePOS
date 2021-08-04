@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".view.admin.AdminMainActivity">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/TextContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/app_mini_layout_height"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:drawablePadding="@dimen/activity_mini_horizontal_margin"
+        android:gravity="center"
+        android:text="@string/appstr_sing_in_welcome"
+        android:textColor="@color/white"
+        android:inputType="textMultiLine" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="2dp">
+
+
+            <LinearLayout
+                android:id="@+id/main_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical"
+                android:padding="@dimen/activity_horizontal_margin">
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/email_field"
+                    style="@style/TextContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:drawablePadding="@dimen/activity_mini_horizontal_margin"
+                    android:hint="@string/appstr_email"
+                    android:inputType="textEmailAddress|textNoSuggestions" />
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/password_field"
+                    style="@style/TextContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:drawablePadding="@dimen/activity_mini_horizontal_margin"
+                    android:hint="@string/appstr_pwd"
+                    android:inputType="textPassword" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/app_mini_button_height"
+                    android:layout_marginTop="@dimen/activity_mini_horizontal_margin">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/login_btn"
+                        style="@style/Button.Login"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/app_mini_button_height"
+                        android:text="@string/common_signin_button_text"
+                        android:textColor="@color/white" />
+
+                    <ProgressBar
+                        android:id="@+id/progress"
+                        style="@style/Button.Login"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/forgot_password_field"
+                    style="@style/TextContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginBottom="@dimen/activity_mini_vertical_margin"
+                    android:drawablePadding="@dimen/activity_mini_horizontal_margin"
+                    android:gravity="center_horizontal"
+                    android:text="@string/appstr_forgot_pwd"
+                    android:textColor="@color/light_blue300" />
+
+                <RelativeLayout
+                    style="@style/TextContent"
+                    android:layout_width="@dimen/app_large_layout_height"
+                    android:layout_height="@dimen/app_mini_button_height"
+                    android:layout_gravity="center">
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_centerVertical="true"
+                        android:background="@color/blue_grey100" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextContent.Bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:paddingStart="@dimen/activity_mini_vertical_margin"
+                        android:paddingLeft="@dimen/activity_mini_vertical_margin"
+                        android:paddingEnd="@dimen/activity_mini_vertical_margin"
+                        android:paddingRight="@dimen/activity_mini_vertical_margin"
+                        android:text="@string/appstr_or" />
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/sign_up_btn"
+                    style="@style/Button.LightWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/app_mini_button_height"
+                    android:layout_marginTop="@dimen/activity_mini_vertical_margin"
+                    android:layout_marginBottom="@dimen/activity_mini_vertical_margin"
+                    android:drawablePadding="10dp"
+                    android:gravity="center"
+                    android:text="@string/appstr_sign_up" />
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="40dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:padding="@dimen/activity_mini_vertical_margin"
+                app:srcCompat="@drawable/ic_employee" />
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

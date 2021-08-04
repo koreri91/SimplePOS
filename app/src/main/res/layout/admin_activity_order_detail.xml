@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:fitsSystemWindows="true"
+    android:focusableInTouchMode="true"
+    tools:context=".view.admin.AdminMainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blue_grey50"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <ScrollView
+            android:id="@+id/scrool_view_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/activity_mini_horizontal_margin">
+
+                <LinearLayout
+                    android:id="@+id/product_list_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_mini_vertical_margin"
+                    android:background="@android:color/white"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/app_mini_layout_height"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:layout_marginStart="@dimen/activity_vertical_margin"
+                        android:layout_marginLeft="@dimen/activity_vertical_margin"
+                        android:layout_marginEnd="@dimen/activity_vertical_margin"
+                        android:layout_marginRight="@dimen/activity_vertical_margin">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextContent.Bold"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:layout_toLeftOf="@+id/add_more_item_btn"
+                            android:layout_toStartOf="@+id/add_more_item_btn"
+                            android:text="@string/appstr_product_list" />
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/add_more_item_btn"
+                            style="@style/TextContent.Bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:paddingStart="@dimen/activity_mini_horizontal_margin"
+                            android:paddingLeft="@dimen/activity_mini_horizontal_margin"
+                            android:paddingEnd="@dimen/activity_vertical_margin"
+                            android:paddingRight="@dimen/activity_vertical_margin"
+                            android:background="@drawable/selector_white_btn"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true"
+                            android:gravity="center_vertical"
+                            android:textAllCaps="true"
+                            android:text="@string/appstr_add_more" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/activity_mini_horizontal_margin"
+                        android:layout_marginLeft="@dimen/activity_vertical_margin"
+                        android:layout_marginStart="@dimen/activity_vertical_margin"
+                        android:layout_marginRight="@dimen/activity_vertical_margin"
+                        android:layout_marginEnd="@dimen/activity_vertical_margin"
+                        android:background="@color/blue_grey200"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/order_list_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_mini_horizontal_margin"
+                        android:layout_marginBottom="@dimen/activity_vertical_margin"
+                        android:clipToPadding="false"
+                        android:isScrollContainer="false"
+                        android:nestedScrollingEnabled="false"
+                        android:overScrollMode="never"
+                        android:scrollbars="none" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_mini_horizontal_margin"
+                    android:background="@android:color/white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/activity_vertical_margin">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextContent.Bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/appstr_customer" />
+
+                    <LinearLayout
+                        android:id="@+id/select_customer_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/app_mini_button_height"
+                        android:layout_marginTop="@dimen/activity_mini_vertical_margin"
+                        android:background="@drawable/selector_white_btn"
+                        android:clickable="true">
+
+                        <com.app.estockcard.view.CustomTextView
+                            android:id="@+id/select_customer_field"
+                            style="@style/TextContentMini"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:gravity="center_vertical"
+                            android:hint="@string/appstr_select_customer"
+                            android:paddingStart="10dp"
+                            android:paddingLeft="10dp"
+                            android:paddingEnd="10dp"
+                            android:paddingRight="10dp" />
+                    </LinearLayout>
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextContentMini"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="@dimen/activity_mini_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_mini_horizontal_margin"
+                        android:layout_marginBottom="5dp"
+                        android:drawablePadding="10dp"
+                        android:inputType="textMultiLine|textNoSuggestions"
+                        android:text="@string/appstr_select_customer_desc"
+                        android:textAllCaps="false"
+                        android:textColor="@color/blue_grey500" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_mini_horizontal_margin"
+                    android:background="@android:color/white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/activity_vertical_margin">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextContent.Bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/activity_mini_vertical_margin"
+                        android:text="@string/appstr_payment_method" />
+
+                    <LinearLayout
+                        android:id="@+id/cash_payment_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/app_mini_button_height"
+                        android:background="@drawable/selector_payment_method"
+                        android:clickable="true"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:id="@+id/cash_payment_indicator"
+                            android:layout_width="@dimen/activity_vertical_margin"
+                            android:layout_height="@dimen/activity_vertical_margin"
+                            android:layout_marginLeft="@dimen/activity_mini_horizontal_margin"
+                            android:layout_marginStart="@dimen/activity_mini_horizontal_margin"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/selector_white_text_field"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextContent"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:paddingStart="10dp"
+                            android:paddingLeft="10dp"
+                            android:text="@string/appstr_cash_method" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/credit_payment_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/app_mini_button_height"
+                        android:background="@drawable/selector_payment_method"
+                        android:clickable="true"
+                        android:layout_marginTop="@dimen/activity_mini_horizontal_margin"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:id="@+id/credit_payment_indicator"
+                            android:layout_width="@dimen/activity_vertical_margin"
+                            android:layout_height="@dimen/activity_vertical_margin"
+                            android:layout_marginLeft="@dimen/activity_mini_horizontal_margin"
+                            android:layout_marginStart="@dimen/activity_mini_horizontal_margin"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/selector_white_text_field"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextContent"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:paddingStart="10dp"
+                            android:paddingLeft="10dp"
+                            android:text="@string/appstr_credit_method" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_mini_horizontal_margin"
+                    android:background="@android:color/white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/activity_vertical_margin">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextContent.Bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/appstr_sale_notes" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        style="@style/TextContentMini"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/app_mini_button_height"
+                        android:layout_marginTop="@dimen/activity_mini_vertical_margin"
+                        android:background="@drawable/selector_white_text_field"
+                        android:hint="@string/appstr_add_notes"
+                        android:paddingStart="10dp"
+                        android:paddingLeft="10dp" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextContentMini"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="@dimen/activity_mini_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_mini_horizontal_margin"
+                        android:layout_marginBottom="5dp"
+                        android:drawablePadding="10dp"
+                        android:inputType="textMultiLine|textNoSuggestions"
+                        android:text="@string/appstr_sale_notes_desc"
+                        android:textAllCaps="false" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_mini_horizontal_margin"
+                    android:background="@android:color/white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/activity_vertical_margin">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextContent.Bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/appstr_discount" />
+
+                    <LinearLayout
+                        android:id="@+id/select_discount_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/app_mini_button_height"
+                        android:layout_marginTop="@dimen/activity_mini_vertical_margin"
+                        android:background="@drawable/selector_white_btn"
+                        android:clickable="true">
+
+                        <com.app.estockcard.view.CustomTextView
+                            style="@style/TextContentMini"
+                            android:id="@+id/select_discount_field"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:gravity="center_vertical"
+                            android:hint="@string/appstr_select_discount"
+                            android:paddingStart="10dp"
+                            android:paddingLeft="10dp"
+                            android:paddingEnd="10dp"
+                            android:paddingRight="10dp"/>
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextContentMini"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="@dimen/activity_mini_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_mini_horizontal_margin"
+                        android:layout_marginBottom="5dp"
+                        android:drawablePadding="10dp"
+                        android:inputType="textMultiLine|textNoSuggestions"
+                        android:text="@string/appstr_select_discount_desc"
+                        android:textAllCaps="false"
+                        android:textColor="@color/blue_grey500" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_mini_horizontal_margin"
+                    android:background="@android:color/white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/activity_vertical_margin">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextContent.Bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/appstr_billing_details" />
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/app_mini_layout_height"
+                        android:layout_marginTop="@dimen/activity_mini_vertical_margin"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextContentMini"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/app_mini_button_height"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="@dimen/activity_mini_horizontal_margin"
+                            android:layout_marginRight="@dimen/activity_mini_horizontal_margin"
+                            android:layout_marginBottom="5dp"
+                            android:drawablePadding="10dp"
+                            android:text="Subtotal"
+                            android:textAllCaps="false" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextContentMini"
+                            android:id="@+id/display_subtotal_field"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/app_mini_button_height"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="@dimen/activity_mini_horizontal_margin"
+                            android:layout_marginRight="@dimen/activity_mini_horizontal_margin"
+                            android:layout_marginBottom="5dp"
+                            android:drawablePadding="10dp"
+                            android:text="Subtotal"
+                            android:textAllCaps="false" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/display_discount_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/app_mini_layout_height"
+                        android:layout_marginTop="@dimen/activity_mini_vertical_margin"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextContentMini"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/app_mini_button_height"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="@dimen/activity_mini_horizontal_margin"
+                            android:layout_marginRight="@dimen/activity_mini_horizontal_margin"
+                            android:layout_marginBottom="5dp"
+                            android:drawablePadding="10dp"
+                            android:text="@string/appstr_discount"
+                            android:textAllCaps="false"
+                            android:textColor="@color/blue_grey500" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextContentMini"
+                            android:id="@+id/display_discount_field"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/app_mini_button_height"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="@dimen/activity_mini_horizontal_margin"
+                            android:layout_marginRight="@dimen/activity_mini_horizontal_margin"
+                            android:layout_marginBottom="5dp"
+                            android:drawablePadding="10dp"
+                            android:text="@string/appstr_discount"
+                            android:textAllCaps="false"
+                            android:textColor="@color/red500" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray" />
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/app_mini_button_height"
+                    android:background="@color/blue_grey100"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/activity_vertical_margin"
+                    android:paddingLeft="@dimen/activity_vertical_margin"
+                    android:paddingEnd="@dimen/activity_vertical_margin"
+                    android:paddingRight="@dimen/activity_vertical_margin">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextContent.Bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/activity_mini_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_mini_horizontal_margin"
+                        android:gravity="center_vertical"
+                        android:text="@string/appstr_total"
+                        android:textAllCaps="false" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextContentMini.Bold"
+                        android:id="@+id/display_total_field"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="@dimen/activity_mini_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_mini_horizontal_margin"
+                        android:gravity="center_vertical"
+                        android:text="@string/appstr_total"
+                        android:textAllCaps="false" />
+
+                </RelativeLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/app_default_layout_height"
+                    android:layout_marginTop="@dimen/app_default_margin" />
+            </LinearLayout>
+        </ScrollView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/pay_btn"
+            style="@style/Button.FAB"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="@string/appstr_pay"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

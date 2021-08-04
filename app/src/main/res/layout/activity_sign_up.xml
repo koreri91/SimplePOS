@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.admin.AdminMainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/close_btn"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?actionBarSize"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/activity_mini_vertical_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    app:cardCornerRadius="25dp"
+                    app:cardElevation="2dp">
+
+
+                    <LinearLayout
+                        android:id="@+id/main_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/app_default_padding"
+                        android:layout_marginBottom="@dimen/app_default_padding"
+                        android:orientation="vertical"
+                        android:padding="@dimen/activity_horizontal_margin">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/username_field"
+                            style="@style/TextContent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/app_mini_button_height"
+                            android:drawablePadding="@dimen/activity_mini_horizontal_margin"
+                            android:hint="@string/appstr_username"
+                            android:inputType="textEmailAddress|textNoSuggestions" />
+
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/email_field"
+                            style="@style/TextContent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/activity_mini_vertical_margin"
+                            android:drawablePadding="@dimen/activity_mini_horizontal_margin"
+                            android:hint="@string/appstr_email"
+                            android:inputType="textEmailAddress|textNoSuggestions" />
+
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/password_field"
+                            style="@style/TextContent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/activity_mini_vertical_margin"
+                            android:drawablePadding="@dimen/activity_mini_horizontal_margin"
+                            android:hint="@string/appstr_pwd"
+                            android:inputType="textPassword" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/app_mini_button_height"
+                            android:layout_gravity="center">
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/sign_up_btn"
+                                style="@style/Button.Login"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/appstr_sign_up"
+                                android:textColor="@color/white" />
+
+                            <ProgressBar
+                                android:id="@+id/progress"
+                                style="@style/Button.Login"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingTop="@dimen/activity_mini_vertical_margin"
+                                android:paddingBottom="@dimen/activity_mini_vertical_margin" />
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/login_with_account_btn"
+                            style="@style/Button.LightWhite"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/app_mini_button_height"
+                            android:layout_below="@+id/main_card"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="@dimen/activity_vertical_margin"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginBottom="@dimen/activity_mini_vertical_margin"
+                            android:drawablePadding="10dp"
+                            android:gravity="left|start|center_vertical"
+                            android:paddingStart="@dimen/app_default_padding"
+                            android:paddingLeft="@dimen/app_default_padding"
+                            android:text="@string/appstr_sign_up_gmail"
+                            android:textAllCaps="false" />
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/app_default_icon_size" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

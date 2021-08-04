@@ -1,0 +1,294 @@
+<resources>
+    <string name="appstr_app_name">eKard</string>
+    <string name="appstr_app_long_name">Electronic Stock Card</string>
+    <string name="appstr_copyright">Copyright &#169; Koreri Soft</string>
+    <string name="appstr_pwd">Password</string>
+    <string name="appstr_forgot_pwd">Forgot Password?</string>
+    <string name="appstr_submit">Submit</string>
+    <string name="appstr_enter_email">Enter your register email</string>
+    <string name="appstr_enter_email_associated">Enter the email address associated with your account</string>
+
+    <string name="appstr_enter_email_link_reset">We will email you a link to reset your password</string>
+    <string name="appstr_sing_in_welcome">Welcome back, please login to your account</string>
+
+    <string name="appstr_add_employee">Add Employee</string>
+
+    <string name="appstr_permission_denied">Permission Denied</string>
+
+
+    <string name="appstr_name">Name</string>
+    <string name="appstr_phone_number">Phone Number</string>
+    <string name="appstr_city">City</string>
+    <string name="appstr_district">District</string>
+    <string name="appstr_village">Village</string>
+    <string name="appstr_postal_code">Postal Code</string>
+    <string name="appstr_address">Address</string>
+
+    <string name="appstr_or">or</string>
+    <string name="appstr_sign_up">Sign Up</string>
+    <string name="appstr_sign_up_gmail">Sign Up with Gmail</string>
+
+
+    <string name="appstr_owner_name">Owner Name</string>
+
+    <string name="appstr_rate_this_app">Rate this app</string>
+
+
+    <string name="appstr_service_mail">korerisoft@gmail.com</string>
+    <string name="appstr_mail_client_gm">com.google.android.gm</string>
+
+    <string name="appstr_text_html">text/html</string>
+    <string name="appstr_mail_subject_title">Subject</string>
+    <string name="appstr_mail_content_hint">Write your question</string>
+
+    <string name="appstr_change">Change</string>
+
+    <string name="appstr_owner_profile">Owner Profile</string>
+    <string name="appstr_general">General</string>
+    <string name="appstr_store_settings">Store Settings</string>
+    <string name="appstr_store_settings_desc">Manage your store profile</string>
+    <string name="appstr_reset_data">Reset Data</string>
+    <string name="appstr_reset_data_desc">Remove all data in your store</string>
+
+    <string name="appstr_device">Device</string>
+    <string name="appstr_printer">Printer</string>
+    <string name="appstr_receipt">Receipt</string>
+    <string name="appstr_printer_desc">Manage your printer</string>
+    <string name="appstr_receipt_desc">Update your receipt</string>
+    <string name="appstr_backup_data">Backup Data</string>
+    <string name="appstr_backup">Back Up</string>
+    <string name="appstr_backup_data_desc">Backup your data to cloud storage</string>
+
+    <string name="appstr_google_drive_settings">Google Drive Settings</string>
+    <string name="appstr_google_drive_desc">Your sales data backed up in Google Drive are not protected by EKard</string>
+
+    <string name="appstr_backup_account_title">Google Account</string>
+    <string name="appstr_backup_over_media_title">Back up over</string>
+    <string name="appstr_backup_schedule_title">Back up to Google Drive</string>
+    <string name="appstr_add_account">Add Account</string>
+    <string name="appstr_gmail_type_account">com.google</string>
+    <string-array name="schedule">
+        <item>Never</item>
+        <item>Only when I tap "Back up"</item>
+        <item>Daily</item>
+        <item>Weekly</item>
+        <item>Monthly</item>
+    </string-array>
+    <string-array name="comm_media">
+        <item>Wi-Fi only</item>
+        <item>Wi-Fi or cellular</item>
+    </string-array>
+    <string name="appstr_backup_sales_data_desc">
+        Backup sales data to google drive.You can restore it when reinstalling app.
+        Your data will also be back up to your phone"'"s internal storage.
+    </string>
+
+    <string name="appstr_help">Help</string>
+    <string name="appstr_contact_us">Contact Us</string>
+    <string name="appstr_user_guide">User Guide</string>
+    <string name="appstr_terms_conditions">Terms and Conditions</string>
+    <string name="appstr_privacy_policy">Privacy policy</string>
+    <string name="appstr_add">+ Add</string>
+    <string name="appstr_filter">Filter</string>
+    <string name="appstr_discount">Discount</string>
+    <string name="appstr_select_discount_desc">The name and nominal discount will appear on the payment display</string>
+    <string name="appstr_select_discount">Select Discount</string>
+    <string name="appstr_search_discount">Search Discount</string>
+    <string name="appstr_add_discount">Add Discount</string>
+    <string name="appstr_edit_discount">Edit Discount</string>
+    <string name="appstr_product">Product</string>
+    <string name="appstr_product_name">Product Name</string>
+    <string name="appstr_example_product_name">Example : Product</string>
+    <string name="appstr_management_content_display">
+        Manage all product, category, discount, and ustomer so everything is recorded neatly
+    </string>
+
+    <string name="appstr_new_product">New Product</string>
+    <string name="appstr_quantity">Quantity</string>
+    <string name="appstr_product_list">Product List</string>
+    <string name="appstr_add_stock_product">Stock &amp; Price</string>
+    <string name="appstr_search_product">Search Product</string>
+    <string name="appstr_edit_product">Edit Product</string>
+    <string name="appstr_add_product">Add Product</string>
+    <string name="appstr_add_more">+ Add More</string>
+    <string name="appstr_all_product">All Product</string>
+    <string name="appstr_category">Category</string>
+    <string name="appstr_product_category">Product Category</string>
+    <string name="appstr_edit_category">Edit Category</string>
+    <string name="appstr_add_category">Add Category</string>
+    <string name="appstr_yes">Yes</string>
+    <string name="appstr_no">No</string>
+
+    <string name="appstr_logout">Logout</string>
+
+    <string name="appstr_no_data">No Data</string>
+    <string name="appstr_delete">Delete</string>
+
+    <string name="appstr_product_ordered_info">Products ordered appear in here</string>
+
+    <string name="appstr_error_customer_not_selected">Customer yang melakukan piutang belum dipilih</string>
+    <string name="appstr_number_of_credit_transaction">Number of Credit Transaction</string>
+    <string name="appstr_number_of_customer">Number of Customer</string>
+    <string name="appstr_sale_notes">Sale Notes</string>
+    <string name="appstr_sale_notes_desc">Add sales records to each of your transactions if needed</string>
+    <string name="appstr_add_notes">Add Notes</string>
+    <string name="appstr_average_sales_or_transaction">Average Sales/Transaction</string>
+    <string name="appstr_number_of_transaction">Number of Transaction</string>
+    <string name="appstr_customer">Customer</string>
+    <string name="appstr_select_date">Select Date</string>
+    <string name="appstr_select_customer">Select Customer</string>
+    <string name="appstr_select_customer_desc">Customer list will be taken from the list of customers that are already available in customer management</string>
+    <string name="appstr_search_customer_data">Search Customer Data</string>
+    <string name="appstr_status_paid_off">Paid Off</string>
+    <string name="appstr_status_credit">Credit</string>
+    <string name="appstr_status_cancelled">Cancelled</string>
+    <string name="appstr_add_customer">Add Customer</string>
+    <string name="appstr_edit_customer">Edit Customer</string>
+    "Daftar Transaksi","Ringkasan Piutang"
+    <string name="appstr_list_of_transactions">List of Transactions</string>
+    <string name="appstr_credit_detail">Credit Detail</string>
+
+
+    <string name="appstr_db_name">estockcard</string>
+    <string name="appstr_navigation_drawer_open">Open navigation drawer</string>
+    <string name="appstr_navigation_drawer_close">Close navigation drawer</string>
+    <string name="appstr_nav_header_title">Header Title</string>
+    <string name="appstr_nav_header_subtitle">name@mail.com</string>
+    <string name="appstr_nav_header_desc">Navigation header</string>
+    <string name="appstr_dashboard">Dashboard</string>
+    <string name="appstr_subtotal">Subtotal</string>
+    <string name="appstr_search_transaction">Search Transaction</string>
+    <string name="appstr_transaction_cancellation">Transaction Cancellation</string>
+    <string name="appstr_cancel_transaction">Cancel Transaction</string>
+    <string name="appstr_return_of_goods">Return of goods</string>
+    <string name="appstr_the_amount_already_paid">The amount already paid</string>
+    <string name="appstr_credit_amount">Credit Amount</string>
+    <string name="appstr_credit_list">Credit List</string>
+    <string name="appstr_view_credit_list">View Credit List</string>
+    <string name="appstr_total_income">Total Income</string>
+    <string name="appstr_pay">Pay</string>
+    <string name="appstr_done">Done</string>
+    <string name="appstr_total_bills">Total Bills</string>
+    <string name="appstr_date">Date</string>
+    <string name="appstr_time_and_date">Time and Date</string>
+    <string name="appstr_date_transaction">Date Transaction</string>
+    <string name="appstr_transaction_id">Transaction ID</string>
+    <string name="appstr_billing_details">Detail Bills</string>
+    <string name="appstr_leftover_money">Loftover Money</string>
+    <string name="appstr_paid_money">Paid Money</string>
+    <string name="appstr_money_received_in_the_beginning">Money received in the beginning</string>
+    <string name="appstr_cancelling_transaction_message_display">Money returned to the customer </string>
+    <string name="appstr_cancelling_transaction">Cancelling Transaction</string>
+    <string name="appstr_send_email">Send Email</string>
+    <string name="appstr_username">Username</string>
+    <string name="appstr_email">E-mail</string>
+    <string name="appstr_save">Save</string>
+    <string name="appstr_print_struct">Print Struct</string>
+    <string name="appstr_order_detail">Order Detail</string>
+    <string name="appstr_payment_is_complete">Payment is Complete</string>
+    <string name="appstr_order">Order</string>
+    <string name="appstr_credit_payment">Credit Payment</string>
+    <string name="appstr_do_payment">Do Payment</string>
+    <string name="appstr_payment_log">Payment Log</string>
+    <string name="appstr_due_date_payment">Due Date Payment</string>
+    <string name="appstr_transaction_not_been_paid_off">Transaction not been paid off</string>
+    <string name="appstr_reason_of_cancelling">Reason of cancelling</string>
+    <string name="appstr_remind_payment">Remind Payment</string>
+    <string name="appstr_amount_of_money_returned">Amount of money returned</string>
+    <string name="appstr_error_due_date_payment_input">Due Date Payment cannot be same with today</string>
+    <string name="appstr_total">Total</string>
+    <string name="appstr_total_payment">Total Payment</string>
+    <string name="appstr_payment_method">Payment Method</string>
+    <string name="appstr_operator">Operator</string>
+    <string name="appstr_cash_method">Cash</string>
+    <string name="appstr_credit_method">Credit</string>
+    <string name="appstr_basket">Basket</string>
+    <string name="appstr_manual_order">Manual Order</string>
+    <string name="appstr_create_order">Create Order</string>
+    <string name="appstr_transaction">Transaction</string>
+    <string name="appstr_transaction_detail">Transaction Detail</string>
+    <string name="appstr_management">Management</string>
+    <string name="appstr_manage_product_stock">Manage Stock Product</string>
+    <string name="appstr_stock_amount">Amount Stock</string>
+    <string name="appstr_minimum_stock">Minimum Stock</string>
+    <string name="appstr_selling_price">Selling Price</string>
+    <string name="appstr_buying_price">Buying Price</string>
+    <string name="appstr_price">Price</string>
+    <string name="appstr_input_amount_of_product_and_price">Input amount of product and price</string>
+    <string name="appstr_zero">0</string>
+    <string name="appstr_report">Report</string>
+    <string name="appstr_settings">Settings</string>
+    <string name="appstr_exit_message">Press back button again to exit</string>
+    <string name="appstr_im_sure">Im sure</string>
+    <string name="appstr_retry">Retry</string>
+    <string name="appstr_not_now">Not now</string>
+    <string name="appstr_network_no_longer_valid">Network no longer valid</string>
+    <string name="appstr_alphabetnumeric">ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789</string>
+    <string name="appstr_menu_delete">Delete</string>
+    <string name="appstr_menu_update">Update</string>
+    <string name="appstr_tab_menu1">Tab Menu1</string>
+    <string name="appstr_tab_menu2">Tab Menu2</string>
+
+    <string name="appstr_cs_registered_account">registered_account</string>
+    <string name="appstr_verify_email_address">
+        Your email not verified\n
+        Please verify your email
+    </string>
+    <string name="appstr_email_not_registered">
+        This email not registered yet\n
+         Please register your account
+    </string>
+    <string name="appstr_email_not_match_with_password">Email not match with password</string>
+    <string name="appstr_please_fill_username_and_password_column">Please fill username and password column</string>
+    <string name="appstr_please_fill_all_column">Please fill all column</string>
+    <string name="appstr_failed_to_send_verification_email">Failed to send verification email</string>
+    <string name="appstr_verification_email_sent_to">Verification email sent to</string>
+    <string name="appstr_link_to_reset_password_already_sent_to">Link to reset password already sent to</string>
+    <string name="appstr_error">Error</string>
+    <string name="appstr_space"> </string>
+    <string name="appstr_zero_space"></string>
+    <string name="appstr_locale_language_code">in</string>
+    <string name="appstr_locale_country_code">id</string>
+
+    <string name="appstr_currency_symbol">Rp</string>
+    <string name="appstr_format_date_yyyy_MM_dd_mm_dd">yyyy/MM/dd:mm-dd</string>
+    <string name="appstr_format_date_EEE_dd_MMM_yyyy">EEE, dd MMM yyyy</string>
+    <string name="appstr_format_currency">#,###,###,###</string>
+
+    <string name="appstr_regex">[Rp,. ]</string>
+
+    <string name="appstr_param_playstore">com.android.vending</string>
+    <string name="appstr_param_shared_preferences">my_preferences</string>
+    <string name="appstr_param_username">username</string>
+    <string name="appstr_param_id">id</string>
+    <string name="appstr_param_pwd">pwd</string>
+    <string name="appstr_param_isactive">isActive</string>
+    <string name="appstr_param_isgranted">isGranted</string>
+    <string name="appstr_param_level">level</string>
+    <string name="appstr_param_datecreated">dateCreated</string>
+
+    <string name="appstr_param_package">package:</string>
+    <string name="appstr_param_name">name</string>
+    <string name="appstr_param_count_ordered">count_ordered</string>
+    <string name="appstr_param_total_price">total_price</string>
+    <string name="appstr_param_date">date</string>
+    <string name="appstr_param_operator">operator</string>
+    <string name="appstr_param_subtotal">subtotal</string>
+    <string name="appstr_param_discount">discount</string>
+    <string name="appstr_param_status">status</string>
+    <string name="appstr_param_total">total</string>
+    <string name="appstr_param_customerName">customerName</string>
+    <string name="appstr_param_dateTime">dateTime</string>
+    <string name="appstr_param_dueDatePayment">dueDatePayment</string>
+    <string name="appstr_param_paid_money">paid_money</string>
+    <string name="appstr_param_payment_method">paymentMethod</string>
+    <string name="appstr_param_transactionID">transactionID</string>
+    <string name="appstr_param_id_discount">idDiscount</string>
+    <string name="appstr_param_id_customer">idCustomer</string>
+
+    <string name="appstr_errormessage_password_invalid">The password is invalid or the user does not have a password</string>
+
+    <item name="arrow_right" type="id"/>
+
+
+</resources>

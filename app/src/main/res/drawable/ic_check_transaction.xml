@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item  android:state_pressed="false">
+        <shape
+            android:shape="rectangle">
+
+            <corners android:radius="25dp"/>
+            <solid android:color="@color/light_blue300"/>
+            <size android:height="3dp"/>
+
+
+        </shape>
+    </item>
+    <item android:drawable="@drawable/ic_check_circle"/>
+</layer-list>

@@ -1,0 +1,164 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">#c5c5c5</item>
+        <item name="colorControlActivated">@color/light_blue300</item>
+        <item name="colorControlHighlight">@color/light_blue50</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">#c5c5c5</item>
+        <item name="colorControlActivated">@color/light_blue300</item>
+        <item name="colorControlHighlight">@color/light_blue50</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar.Light" parent="AppTheme.NoActionBar">
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar.BlueLight" parent="AppTheme.NoActionBar">
+        <item name="android:statusBarColor">@color/light_blue700</item>
+        <item name="android:windowBackground">@color/light_blue700</item>
+    </style>
+
+    <style name="TextTitle.Medium.Bold" parent="Text" >
+        <item name="android:textSize">48sp</item>
+        <item name="android:textColor">@color/blue_grey800</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text">
+        <item name="android:fontFamily">@font/roboto_light</item>
+    </style>
+
+
+    <style name="TextTitle.Bold" parent="Text" >
+        <item name="android:textSize">36sp</item>
+        <item name="android:textColor">@color/blue_grey700</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextTitle" parent="Text" >
+        <item name="android:textSize">36sp</item>
+        <item name="android:textColor">@color/blue_grey700</item>
+    </style>
+
+
+    <style name="TextContent" parent="Text" >
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/blue_grey400</item>
+    </style>
+
+    <style name="TextContent.Bold" parent="Text" >
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/blue_grey800</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="TextContentLink.Bold" parent="Text" >
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/light_blue800</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextContentMini" parent="Text" >
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/blue_grey400</item>
+    </style>
+
+    <style name="TextContentMini.Bold" parent="Text" >
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/blue_grey800</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Button" parent="Widget.AppCompat.Button">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:fontFamily">@font/roboto_light</item>
+    </style>
+
+    <style name="Button.Save" parent="Button">
+        <item name="android:background">@drawable/selector_orange_btn</item>
+    </style>
+
+    <style name="Button.Order" parent="Button">
+        <item name="android:background">@drawable/selector_sell_btn</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">45dp</item>
+    </style>
+
+    <style name="Button.Login" parent="Button">
+        <item name="android:background">@drawable/selector_blue_btn</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">45dp</item>
+    </style>
+    <style name="Button.FAB" parent="Button">
+        <item name="android:background">@drawable/selector_fab_btn</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/app_fab_height</item>
+        <item name="android:textAppearance">@style/TextContent.Bold</item>
+    </style>
+
+    <style name="Button.Cancel" parent="Button">
+        <item name="android:background">@drawable/selector_white_btn</item>
+        <item name="android:textColor">@color/blue_grey500</item>
+    </style>
+
+    <style name="Button.LightWhite" parent="Button">
+        <item name="android:background">@drawable/selector_white_btn</item>
+        <item name="android:textColor">@color/blue_grey700</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/app_mini_layout_height</item>
+    </style>
+
+    <style name="TabLayoutStyle" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/light_blue500</item>
+        <item name="tabRippleColor">@color/light_blue50</item>
+        <item name="tabIndicatorHeight">@dimen/activity_mini_vertical_margin</item>
+        <item name="tabTextColor">@color/blue_grey400</item>
+        <item name="tabSelectedTextColor">@color/blue_grey800</item>
+        <item name="tabTextAppearance">@style/CustomTabText</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="CustomTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/app_default_button_height</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+
+    <style name="SheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:colorBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.3</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="fabTheme">
+        <item name="colorAccent">@color/blue_grey600</item>
+        <item name="colorControlNormal">#c5c5c5</item>
+        <item name="colorControlActivated">@color/light_blue300</item>
+        <item name="colorControlHighlight">@color/light_blue50</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+</resources>

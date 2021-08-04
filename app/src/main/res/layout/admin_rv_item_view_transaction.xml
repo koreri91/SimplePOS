@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/app_medium_layout_height"
+    android:clickable="true"
+    android:paddingStart="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_vertical_margin"
+    android:paddingEnd="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_vertical_margin"
+    android:background="@drawable/selector_white">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icon"
+        android:layout_width="@dimen/app_small_layout_height"
+        android:layout_height="@dimen/app_small_layout_height"
+        android:layout_centerVertical="true"
+        android:clickable="false"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/ic_monetization" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/display_status"
+        android:layout_width="@dimen/app_medium_layout_height"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/selector_blue"
+        android:gravity="center"
+        android:clickable="false"
+        android:paddingLeft="@dimen/activity_mini_horizontal_margin"
+        android:paddingStart="@dimen/activity_mini_horizontal_margin"
+        android:paddingRight="@dimen/activity_mini_horizontal_margin"
+        android:paddingEnd="@dimen/activity_mini_horizontal_margin"
+        android:paddingTop="@dimen/activity_mini_vertical_margin"
+        android:paddingBottom="@dimen/activity_mini_vertical_margin"
+
+        android:text="@string/appstr_status_paid_off"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        style="@style/TextContentMini.Bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/icon"
+        android:layout_toRightOf="@+id/icon"
+        android:orientation="vertical"
+        android:clickable="false"
+        android:paddingStart="5dp"
+        android:paddingLeft="5dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/total_payment_field"
+            style="@style/TextContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/appstr_app_name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/custumer_name_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextContentMini"
+            android:text="@string/appstr_app_name"
+            android:textColor="@android:color/black" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/transaction_id_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/appstr_app_name"
+            style="@style/TextContentMini"
+            android:textColor="@android:color/black" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+

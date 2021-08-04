@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "733756559508",
+    "firebase_url": "https://ekard-pos-2019-e6a25.firebaseio.com",
+    "project_id": "ekard-pos-2019-e6a25",
+    "storage_bucket": "ekard-pos-2019-e6a25.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:733756559508:android:3fdcdba44be5087d",
+        "android_client_info": {
+          "package_name": "com.app.estockcard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "733756559508-s8lb6q8iq91d0u1rgrf0fjl9uuv311ga.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDrbbyLw-QFpLh2Tye7leNoOMT7ysWLAU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "733756559508-s8lb6q8iq91d0u1rgrf0fjl9uuv311ga.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

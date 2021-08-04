@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_mini_layout_height"
+        android:layout_marginTop="@dimen/activity_mini_vertical_margin"
+        android:layout_marginBottom="@dimen/activity_mini_vertical_margin"
+        android:layout_marginStart="@dimen/app_default_padding"
+        android:layout_marginLeft="@dimen/app_default_padding"
+        android:layout_marginEnd="@dimen/app_default_padding"
+        android:layout_marginRight="@dimen/app_default_padding"
+        android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/TextTitle.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:text="@string/appstr_payment_log"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/close_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/ic_close"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/data_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:overScrollMode="never"/>
+
+
+</LinearLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_product_item_rv"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/app_medium_layout_height"
+    android:background="@drawable/selector_white"
+    android:paddingStart="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_vertical_margin"
+    android:paddingEnd="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:padding="5dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/photo"
+        android:layout_width="72dp"
+        android:layout_height="96dp"
+        android:minWidth="64dp"
+        android:minHeight="96dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/ic_product" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/delete_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:paddingLeft="@dimen/activity_mini_vertical_margin"
+        android:paddingStart="@dimen/activity_mini_vertical_margin"
+        android:paddingRight="@dimen/activity_mini_vertical_margin"
+        android:paddingEnd="@dimen/activity_mini_vertical_margin"
+        app:srcCompat="@drawable/ic_trash" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/price_field"
+        style="@style/TextContent"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toStartOf="@+id/delete_btn"
+        android:layout_toLeftOf="@+id/delete_btn"
+        android:gravity="center_vertical"
+        android:text="Price" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toStartOf="@+id/price_field"
+        android:layout_toLeftOf="@+id/price_field"
+        android:layout_toEndOf="@+id/photo"
+        android:layout_toRightOf="@+id/photo"
+        android:orientation="vertical"
+        android:paddingStart="5dp"
+        android:paddingLeft="5dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/name_field"
+            style="@style/TextContent.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/appstr_product" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/stock_field"
+            style="@style/TextContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/appstr_quantity" />
+    </LinearLayout>
+
+</RelativeLayout>
+

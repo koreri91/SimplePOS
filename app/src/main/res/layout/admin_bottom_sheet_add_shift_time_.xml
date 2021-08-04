@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:theme="@style/SheetDialog"
+    android:paddingBottom="10dp"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="55dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/add_schedule_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_top"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:text="Simpan"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/orange500"/>
+
+    <LinearLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/title_bottom_sheet"
+                    style="@style/TextAppearance.AppCompat.Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|start"
+                    android:background="@color/colorPrimary"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="7dp"
+                    android:paddingStart="7dp"
+                    android:text="Input Jadwal Shift"
+                    android:textAlignment="textStart"
+                    android:textColor="@android:color/white"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/cancel_btn"
+                    style="@style/Widget.MaterialComponents.CardView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/colorPrimary"
+                    android:paddingRight="5dp"
+                    android:paddingEnd="5dp"
+                    android:paddingTop="5dp"
+                    app:srcCompat="@drawable/ic_close" />
+
+
+            </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <com.app.estockcard.controller.util.CustomNumberPicker
+                    android:id="@+id/month_number_picker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp" />
+
+                <com.app.estockcard.controller.util.CustomNumberPicker
+                    android:id="@+id/day_number_picker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/month_number_picker"
+                    android:layout_toLeftOf="@+id/month_number_picker" />
+
+                <com.app.estockcard.controller.util.CustomNumberPicker
+                    android:id="@+id/year_number_picker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/month_number_picker"
+                    android:layout_toRightOf="@+id/month_number_picker" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/blue_grey400" />
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/title_shifter_count"
+                        style="@style/TextAppearance.AppCompat.Subhead"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:paddingStart="5dp"
+                        android:paddingLeft="5dp"
+                        android:paddingEnd="5dp"
+                        android:paddingRight="5dp"
+                        android:text="Jumlah Shift"
+                        android:textColor="@android:color/black" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/title_shifter_count"
+                        android:layout_toRightOf="@+id/title_shifter_count"
+                        android:orientation="horizontal"
+                        android:paddingStart="20dp"
+                        android:paddingLeft="20dp">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/minus_btn"
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:backgroundTint="@color/light_blue400"
+                            android:layout_width="60dp"
+                            android:layout_height="match_parent"
+                            android:text="-" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/shifter_count_field"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:backgroundTint="@android:color/white"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:text="0" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/plus_btn"
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:backgroundTint="@color/light_blue400"
+                            android:layout_width="60dp"
+                            android:layout_height="match_parent"
+                            android:text="+" />
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/blue_grey400" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/shift_list_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:spanCount="2"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/message_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="Lengkapi form"/>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

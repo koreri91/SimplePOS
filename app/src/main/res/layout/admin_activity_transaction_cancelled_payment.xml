@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:fitsSystemWindows="true"
+    android:focusableInTouchMode="true"
+    tools:context=".view.admin.AdminMainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <ScrollView
+            android:id="@+id/content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/app_small_layout_height"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/appstr_amount_of_money_returned"
+                    android:gravity="center_horizontal"/>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/total_payment_field"
+                    style="@style/TextTitle.Medium.Bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_mini_horizontal_margin"
+                    android:text="@string/appstr_total_payment"
+                    android:gravity="center_horizontal"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="@drawable/selector_gray_dotted"
+                    android:layout_marginLeft="@dimen/app_mini_layout_height"
+                    android:layout_marginStart="@dimen/app_mini_layout_height"
+                    android:layout_marginRight="@dimen/app_mini_layout_height"
+                    android:layout_marginEnd="@dimen/app_mini_layout_height"
+                    android:layout_marginTop="@dimen/app_small_layout_height"
+                    />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/app_mini_layout_height"
+                    android:layout_marginStart="@dimen/app_mini_layout_height"
+                    android:layout_marginRight="@dimen/app_mini_layout_height"
+                    android:layout_marginEnd="@dimen/app_mini_layout_height"
+                    android:layout_marginTop="@dimen/app_mini_layout_height"
+                    android:gravity="left|start"
+                    android:text="@string/appstr_reason_of_cancelling" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    style="@style/TextContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_white_text_field"
+                    android:layout_marginLeft="@dimen/app_mini_layout_height"
+                    android:layout_marginStart="@dimen/app_mini_layout_height"
+                    android:layout_marginRight="@dimen/app_mini_layout_height"
+                    android:layout_marginEnd="@dimen/app_mini_layout_height"
+                    android:layout_marginTop="@dimen/activity_mini_vertical_margin"
+                    android:minLines="5"
+                    android:gravity="left|start"/>
+
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/app_large_layout_height" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/cancel_transaction_btn"
+            style="@style/Button.FAB"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:text="@string/appstr_cancel_transaction"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

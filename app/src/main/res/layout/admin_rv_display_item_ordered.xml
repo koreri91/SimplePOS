@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_vertical_margin"
+    android:paddingStart="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_vertical_margin"
+    android:paddingEnd="@dimen/activity_vertical_margin"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/name_field"
+            style="@style/TextContentMini.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/price_field"
+            style="@style/TextContentMini.Bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="right|end"
+            android:text="@string/appstr_price" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_mini_layout_height"
+        android:layout_marginTop="@dimen/activity_mini_vertical_margin"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/stock_field"
+            style="@style/TextContentMini"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/appstr_quantity"
+            android:layout_toLeftOf="@+id/sell_btn"
+            android:layout_toStartOf="@+id/sell_btn"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/sell_btn"
+            style="@style/Button.Order"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="@dimen/app_default_button_height"
+            android:layout_height="match_parent"
+            android:text="Jual"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+</LinearLayout>
+

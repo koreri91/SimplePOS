@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_parent_item_customer_rv"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/app_default_layout_height"
+    android:background="@drawable/selector_white"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingEnd="@dimen/activity_horizontal_margin"
+    android:paddingLeft="@dimen/activity_vertical_margin"
+    android:paddingStart="@dimen/activity_vertical_margin"
+    android:clickable="true">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/display_credit_amount_field"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:paddingLeft="@dimen/activity_mini_vertical_margin"
+        android:paddingStart="@dimen/activity_mini_vertical_margin"
+        android:paddingRight="@dimen/activity_mini_vertical_margin"
+        android:paddingEnd="@dimen/activity_mini_vertical_margin"
+        android:clickable="false"
+        style="@style/TextContent.Bold"
+        android:text="@string/appstr_total"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@+id/display_credit_amount_field"
+        android:layout_toLeftOf="@+id/display_credit_amount_field"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:clickable="false"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fullname_field"
+            style="@style/TextContent.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/appstr_app_name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/date_of_credit_field"
+            style="@style/TextContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/appstr_app_name"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

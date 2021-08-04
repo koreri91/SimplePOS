@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_mini_layout_height"
+        android:layout_marginTop="@dimen/activity_mini_vertical_margin"
+        android:layout_marginBottom="@dimen/activity_mini_vertical_margin"
+        android:layout_marginStart="@dimen/activity_mini_horizontal_margin"
+        android:layout_marginLeft="@dimen/activity_mini_horizontal_margin"
+        android:layout_marginEnd="@dimen/app_default_padding"
+        android:layout_marginRight="@dimen/app_default_padding"
+        android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/TextContent.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:text="@string/appstr_billing_details"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/close_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/ic_close"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/data_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:overScrollMode="never"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/blue_grey200"
+        android:layout_marginStart="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginEnd="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
+        android:layout_marginTop="@dimen/activity_mini_vertical_margin"
+        android:layout_marginBottom="@dimen/activity_mini_vertical_margin"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_mini_vertical_margin"
+        android:layout_marginBottom="@dimen/activity_mini_vertical_margin"
+        android:layout_marginStart="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginEnd="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
+        android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/TextContentMini.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/appstr_subtotal"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/display_subtotal_field"
+            style="@style/TextContentMini.Bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/appstr_subtotal"
+            android:gravity="right|end"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/display_discount_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_mini_vertical_margin"
+        android:layout_marginBottom="@dimen/activity_mini_vertical_margin"
+        android:layout_marginStart="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginEnd="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
+        android:visibility="gone"
+        android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/appstr_discount"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/display_discount_field"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/red500"
+            android:text="@string/appstr_discount"
+            android:gravity="right|end"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_mini_layout_height"
+        android:paddingTop="@dimen/activity_mini_vertical_margin"
+        android:paddingBottom="@dimen/activity_mini_vertical_margin"
+        android:paddingLeft="@dimen/activity_mini_horizontal_margin"
+        android:paddingStart="@dimen/activity_mini_horizontal_margin"
+        android:paddingRight="@dimen/app_default_padding"
+        android:paddingEnd="@dimen/app_default_padding"
+        android:background="@color/blue_grey100"
+        android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/TextContent.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/appstr_total_bills"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/display_total_billing_field"
+            style="@style/TextContent.Bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/appstr_total_bills"
+            android:gravity="right|end"/>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

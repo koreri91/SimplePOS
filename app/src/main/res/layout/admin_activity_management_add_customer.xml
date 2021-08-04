@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.admin.AdminMainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/content_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/item_save_btn"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingStart="@dimen/activity_horizontal_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingEnd="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:orientation="vertical">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/TextContent.Bold"
+                        android:text="@string/appstr_name"/>
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/name_field"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/app_mini_edit_text"
+                        android:layout_marginTop="@dimen/activity_mini_vertical_margin"
+                        android:paddingStart="@dimen/activity_mini_vertical_margin"
+                        android:paddingLeft="@dimen/activity_mini_vertical_margin"
+                        android:inputType="textNoSuggestions"
+                        android:background="@drawable/selector_edit_text_disabled"
+                        android:hint=""/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:orientation="vertical">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/TextContent.Bold"
+                        android:text="@string/appstr_phone_number"/>
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/cellular_number_field"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/app_mini_edit_text"
+                        android:layout_marginTop="@dimen/activity_mini_vertical_margin"
+                        android:paddingStart="@dimen/activity_mini_vertical_margin"
+                        android:paddingLeft="@dimen/activity_mini_vertical_margin"
+                        android:inputType="phone"
+                        android:background="@drawable/selector_edit_text_disabled"
+                        android:hint=""/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:orientation="vertical">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/TextContent.Bold"
+                        android:text="@string/appstr_email"/>
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/email_field"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/app_mini_edit_text"
+                        android:layout_marginTop="@dimen/activity_mini_vertical_margin"
+                        android:paddingStart="@dimen/activity_mini_vertical_margin"
+                        android:paddingLeft="@dimen/activity_mini_vertical_margin"
+                        android:inputType="textNoSuggestions"
+                        android:background="@drawable/selector_edit_text_disabled"
+                        android:hint=""/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:orientation="vertical">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/TextContent.Bold"
+                        android:text="@string/appstr_city"/>
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/city_field"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/app_mini_edit_text"
+                        android:layout_marginTop="@dimen/activity_mini_vertical_margin"
+                        android:paddingStart="@dimen/activity_mini_vertical_margin"
+                        android:paddingLeft="@dimen/activity_mini_vertical_margin"
+                        android:inputType="textNoSuggestions"
+                        android:background="@drawable/selector_edit_text_disabled"
+                        android:hint=""/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:orientation="vertical">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/TextContent.Bold"
+                        android:text="@string/appstr_district"/>
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/subdistrict_field"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/app_mini_edit_text"
+                        android:layout_marginTop="@dimen/activity_mini_vertical_margin"
+                        android:paddingStart="@dimen/activity_mini_vertical_margin"
+                        android:paddingLeft="@dimen/activity_mini_vertical_margin"
+                        android:inputType="textNoSuggestions"
+                        android:background="@drawable/selector_edit_text_disabled"
+                        android:hint=""/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:orientation="vertical">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/TextContent.Bold"
+                        android:text="@string/appstr_village"/>
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/village_field"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/app_mini_edit_text"
+                        android:layout_marginTop="@dimen/activity_mini_vertical_margin"
+                        android:paddingStart="@dimen/activity_mini_vertical_margin"
+                        android:paddingLeft="@dimen/activity_mini_vertical_margin"
+                        android:inputType="textNoSuggestions"
+                        android:background="@drawable/selector_edit_text_disabled"
+                        android:hint=""/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:orientation="vertical">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/TextContent.Bold"
+                        android:text="@string/appstr_postal_code"/>
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/postal_code_field"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/app_mini_edit_text"
+                        android:layout_marginTop="@dimen/activity_mini_vertical_margin"
+                        android:paddingStart="@dimen/activity_mini_vertical_margin"
+                        android:paddingLeft="@dimen/activity_mini_vertical_margin"
+                        android:inputType="textNoSuggestions"
+                        android:background="@drawable/selector_edit_text_disabled"
+                        android:hint=""/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:orientation="vertical">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/TextContent.Bold"
+                        android:text="@string/appstr_address"/>
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/address_field"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/app_mini_edit_text"
+                        android:layout_marginTop="@dimen/activity_mini_vertical_margin"
+                        android:paddingStart="@dimen/activity_mini_vertical_margin"
+                        android:paddingLeft="@dimen/activity_mini_vertical_margin"
+                        android:inputType="textNoSuggestions"
+                        android:background="@drawable/selector_edit_text_disabled"
+                        android:hint=""/>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/item_save_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:enabled="false"
+            style="@style/Button.FAB"
+            android:text="@string/appstr_save"
+            android:textColor="@android:color/white" />
+
+
+    </RelativeLayout>
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

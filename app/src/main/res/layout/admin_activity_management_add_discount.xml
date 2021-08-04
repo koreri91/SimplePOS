@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.admin.AdminMainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/content_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/item_save_btn"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_mini_horizontal_margin"
+                android:layout_marginLeft="@dimen/activity_mini_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_mini_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_mini_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_mini_horizontal_margin"
+                android:layout_marginBottom="@dimen/app_large_layout_height"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextTitle.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/app_default_padding"
+                    android:layout_marginRight="@dimen/app_default_padding"
+                    android:layout_marginBottom="@dimen/app_default_padding"
+                    android:text="Masukkan nominal diskon" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Nama dan nominal diskon akan muncul pada tampilan pembayaran"
+                    android:imeOptions="actionNext"
+                    android:inputType="textMultiLine" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextContent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Nama Diskon *"
+                        android:imeOptions="actionNext"
+                        android:inputType="textAutoComplete" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/name_field"
+                        style="@style/TextContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/app_mini_edit_text"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/selector_edit_text_disabled"
+                        android:hint="Contoh: DISKON 30"
+                        android:imeOptions="actionNext"
+                        android:inputType="text|textNoSuggestions"
+                        android:paddingStart="@dimen/app_default_padding"
+                        android:paddingLeft="@dimen/app_default_padding" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextContent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Deskripsi"
+                        android:imeOptions="actionNext"
+                        android:inputType="textAutoComplete" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/discount_description_field"
+                        style="@style/TextContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/app_mini_edit_text"
+                        android:layout_marginTop="@dimen/activity_mini_vertical_margin"
+                        android:background="@drawable/selector_edit_text_disabled"
+                        android:hint="Contoh: Diskon 30% untuk produk elektronik"
+                        android:imeOptions="actionNext"
+                        android:inputType="text|textNoSuggestions"
+                        android:paddingStart="@dimen/app_default_padding"
+                        android:paddingLeft="@dimen/app_default_padding" />
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:id="@+id/layout_discount_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextContent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="Tipe Diskon"
+                            android:imeOptions="actionNext"
+                            android:inputType="textAutoComplete" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/app_mini_edit_text"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/currency_toggle_btn"
+                                style="@style/Button.Cancel"
+                                android:layout_width="@dimen/app_mini_edit_text"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/toggle_left_btn_selected"
+                                android:text="Rp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/percent_toggle_btn"
+                                style="@style/Button.Cancel"
+                                android:layout_width="@dimen/app_mini_edit_text"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/toggle_right_btn"
+                                android:text="%" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginLeft="@dimen/activity_vertical_margin"
+                        android:layout_toEndOf="@+id/layout_discount_type"
+                        android:layout_toRightOf="@+id/layout_discount_type"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextContent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="Nominal Diskon*"
+                            android:imeOptions="actionNext"
+                            android:inputType="textAutoComplete" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/discount_value_field"
+                            style="@style/TextContent"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/app_mini_edit_text"
+                            android:background="@drawable/selector_edit_text_disabled"
+                            android:hint="Contoh: Rp 30.000 atau 10.000"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:paddingStart="@dimen/app_default_padding"
+                            android:paddingLeft="@dimen/app_default_padding" />
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/item_save_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:layout_margin="@dimen/activity_mini_horizontal_margin"
+            android:background="@drawable/selector_orange_btn"
+            android:enabled="false"
+            android:text="Simpan"
+            android:textColor="@android:color/white" />
+
+
+    </RelativeLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

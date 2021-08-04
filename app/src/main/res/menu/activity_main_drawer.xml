@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@drawable/ic_home"
+            android:visible="false"
+            android:title="@string/appstr_dashboard" />
+        <item
+            android:id="@+id/nav_order"
+            android:icon="@drawable/ic_order"
+            android:title="@string/appstr_order" />
+
+        <item
+            android:id="@+id/nav_transaction"
+            android:icon="@drawable/ic_dollars_transaction"
+            android:title="@string/appstr_transaction" />
+
+        <item
+            android:id="@+id/nav_management"
+            android:icon="@drawable/ic_management"
+            android:title="@string/appstr_management" />
+
+        <item
+            android:id="@+id/nav_report"
+            android:icon="@drawable/ic_report_print"
+            android:title="@string/appstr_report" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_store_settings"
+            android:title="@string/appstr_settings" />
+
+    </group>
+
+
+</menu>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/title_shift_list_item_rv"
+        style="@style/TextAppearance.AppCompat.Body2"
+        android:layout_width="30sp"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:paddingTop="1dp"
+        android:text="01"
+        android:textColor="@color/blue_grey500"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_toEndOf="@+id/title_shift_list_item_rv"
+        android:layout_toRightOf="@+id/title_shift_list_item_rv"
+        android:background="@drawable/selector_white_text_field">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/icon_arrow_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            app:srcCompat="@drawable/ic_arrow_right" />
+
+        <LinearLayout
+            android:id="@+id/layout_employee_shift_list_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/icon_arrow_right"
+            android:layout_toLeftOf="@+id/icon_arrow_right"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/employee_shift_list_rv"
+                style="@style/TextAppearance.AppCompat.Subhead"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:paddingStart="5dp"
+                android:paddingLeft="5dp"
+                android:text="Input Karyawan"
+                android:textColor="@android:color/black" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/time_shift_list_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:paddingStart="5dp"
+                android:paddingLeft="5dp"
+                android:text="Jam Shift"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>
+

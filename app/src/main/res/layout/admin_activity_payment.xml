@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.admin.AdminMainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/content_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="45dp"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextTitle.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/appstr_total_bills" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/display_total_billing_field"
+                    style="@style/TextContent.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/appstr_total_payment" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/billing_details_field"
+                    style="@style/TextContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="right|end"
+                    android:linksClickable="true"
+                    android:text="@string/appstr_billing_details"
+                    android:textColorLink="@color/light_blue700" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/paid_money_title"
+                    style="@style/TextContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/appstr_paid_money" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/money_paid_field"
+                    style="@style/TextContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/app_mini_edit_text"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/selector_edit_text_disabled"
+                    android:digits="0123456789"
+                    android:hint="Rp 0"
+                    android:imeOptions="actionNext"
+                    android:inputType="number|textNoSuggestions"
+                    android:paddingStart="10dp"
+                    android:paddingLeft="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/due_date_payment_component"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_mini_horizontal_margin"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/due_date_payment_title"
+                    style="@style/TextContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/appstr_due_date_payment" />
+
+                <LinearLayout
+                    android:id="@+id/due_date_payment_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/app_mini_button_height"
+                    android:background="@drawable/selector_white_btn"
+                    android:clickable="true">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/due_date_payment_field"
+                        style="@style/TextContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center_vertical"
+                        android:paddingStart="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingEnd="@dimen/activity_mini_horizontal_margin"
+                        android:paddingRight="@dimen/activity_mini_horizontal_margin" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_mini_horizontal_margin"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/leftover_money_field"
+                    style="@style/TextContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/appstr_leftover_money" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/pay_btn"
+                    style="@style/Button.FAB"
+                    android:layout_marginTop="@dimen/activity_mini_horizontal_margin"
+                    android:text="@string/appstr_pay" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recomended_nominal_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_mini_horizontal_margin"
+                android:clipToPadding="false"
+                android:isScrollContainer="false"
+                android:orientation="vertical"
+                android:overScrollMode="never" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/display_info_recomended_nominal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_mini_horizontal_margin"
+                android:text="Kamu bisa menggunakan rekomendasi nominal uang yang tersedia jika sesuai dengan nominal uang yang kamu terima" />
+
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_parent_item_employee_rv"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/app_small_layout_height"
+    android:background="@color/blue_grey50"
+    android:paddingStart="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_vertical_margin"
+    android:paddingEnd="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_vertical_margin"
+    android:orientation="horizontal">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/display_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextTitle.Bold"
+        android:layout_gravity="center_vertical"
+        android:text="@string/appstr_app_name"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/display_total_payment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="end|right"
+        style="@style/TextContent"
+        android:text="@string/appstr_status_paid_off" />
+
+</LinearLayout>
+

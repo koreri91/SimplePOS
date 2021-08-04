@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+    tools:context=".view.admin.AdminMainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_small_layout_height"
+        android:paddingLeft="@dimen/activity_mini_horizontal_margin"
+        android:paddingStart="@dimen/activity_mini_horizontal_margin"
+        android:paddingRight="@dimen/activity_mini_horizontal_margin"
+        android:paddingEnd="@dimen/activity_mini_horizontal_margin"
+        android:paddingTop="@dimen/activity_mini_horizontal_margin"
+        android:paddingBottom="@dimen/activity_mini_horizontal_margin"
+        android:background="@drawable/selector_grey_item">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/barcode_btn"
+            android:layout_width="@dimen/app_small_layout_height"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/activity_mini_vertical_margin"
+            android:layout_marginLeft="@dimen/activity_mini_vertical_margin"
+            android:paddingLeft="@dimen/activity_mini_horizontal_margin"
+            android:paddingStart="@dimen/activity_mini_horizontal_margin"
+            android:paddingRight="@dimen/activity_mini_horizontal_margin"
+            android:paddingEnd="@dimen/activity_mini_horizontal_margin"
+            android:background="@drawable/selector_white_btn"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_menu_camera" />
+
+        <LinearLayout
+            android:id="@+id/barcode_field"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_default_edit_text"
+            android:layout_toStartOf="@id/barcode_btn"
+            android:layout_toLeftOf="@id/barcode_btn"
+            android:background="@drawable/selector_white_text_field"
+            android:clickable="true">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/manual_order_field"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:gravity="center"
+                style="@style/TextContent"
+                android:text="@string/appstr_manual_order"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_vertical_margin"
+        android:paddingEnd="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_vertical_margin">
+
+        <View
+            android:id="@+id/center_line"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:layout_centerHorizontal="true"
+            android:background="@color/blue_grey100"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:paddingEnd="10dp"
+            android:paddingRight="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/center_line"
+            android:layout_toLeftOf="@+id/center_line"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_white"
+                android:clickable="true"
+                android:orientation="vertical"
+                android:paddingTop="5dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/product_category_dropdown"
+                    style="@style/TextContent.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:text="@string/appstr_category" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/category_name_title"
+                style="@style/TextContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="@string/appstr_category" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/center_line"
+            android:layout_toRightOf="@+id/center_line"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/add_product_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end|right"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/selector_blue_btn"
+                android:drawablePadding="10dp"
+                android:paddingStart="@dimen/activity_mini_horizontal_margin"
+                android:paddingLeft="@dimen/activity_mini_horizontal_margin"
+                android:paddingEnd="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                style="@style/TextContent"
+                android:text="@string/appstr_new_product"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/blue_grey100" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:overScrollMode="ifContentScrolls"
+            android:scrollbars="vertical"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:scrollbars="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/product_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:isScrollContainer="false"
+                    android:nestedScrollingEnabled="false"
+                    android:overScrollMode="never"
+                    android:scrollbars="none" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/app_medium_layout_height"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"/>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <RelativeLayout
+                android:id="@+id/layout_item_ordered"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/app_default_layout_height"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:background="@drawable/selector_blue_btn"
+                android:clickable="true"
+                android:paddingBottom="10dp">
+
+                <View
+                    android:layout_width="@dimen/app_medium_layout_height"
+                    android:layout_height="2dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/light_blue300" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/icon_item_ordered"
+                    android:layout_width="@dimen/app_small_layout_height"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp"
+                    app:srcCompat="@drawable/ic_menu_cart" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/app_small_layout_height"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp"
+                    app:srcCompat="@drawable/ic_shopping_basket_white" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/icon_item_ordered"
+                    android:layout_toRightOf="@+id/icon_item_ordered"
+                    android:clickable="false"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/title_field"
+                        style="@style/TextContent.Bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:text="@string/appstr_basket"
+                        android:textColor="@color/white" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/price_display_field"
+                        style="@style/TextContent.Bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:text="@string/appstr_order"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

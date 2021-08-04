@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.app.estockcard">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+    <application
+        android:name=".controller.AppConfig"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/appstr_app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar.Light">
+        <activity
+            android:name=".view.SplashScreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/appstr_app_name"
+            android:theme="@style/AppTheme.NoActionBar.BlueLight">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar.BlueLight"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.SignUpActivity"
+            android:theme="@style/AppTheme.NoActionBar.BlueLight"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.ForgotPasswordActivity"
+            android:theme="@style/AppTheme.NoActionBar.BlueLight"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.admin.AdminMainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.admin.management.employee.EmployeeAddActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.admin.management.category.CategoryAddActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.admin.management.product.ProductActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.admin.management.product.ProductAddActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.admin.management.product.ProductAddStockPrice"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.admin.management.category.CategoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.admin.management.discount.DiscountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.admin.management.discount.DiscountAddActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".view.admin.management.customer.CustomerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.admin.management.customer.CustomerAddActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.admin.management.employee.EmployeeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.admin.management.device.DeviceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.admin.management.tax.TaxActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".view.admin.order.ManualOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.admin.shift.ShiftHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.admin.shift.ShiftAddScheduleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.admin.shift.ShiftEmployeeSelectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.employee.EmployeeMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".view.admin.barcode.ScannerActivity"
+            android:autoRemoveFromRecents="true"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".view.admin.TestConstraintActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.admin.order.OrderDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.admin.order.PaymentActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.admin.order.PaymentResultActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".view.admin.transaction.TransactionDetailActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.admin.transaction.TransactionCreditPaymentActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.admin.transaction.TransactionPaymentCancelledActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.admin.transaction.ListCreditCustomerActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".view.admin.settings.ProfileOwnerActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".view.admin.settings.StoreSettingsActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.admin.settings.ResetDataActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.admin.settings.PrinterSettingsActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.admin.settings.StructSettingsActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.admin.settings.BackupDataActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.admin.settings.UserGuideActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.admin.settings.PrivacyPolicyActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".view.admin.settings.TermsConditionActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+
+    </application>
+
+</manifest>

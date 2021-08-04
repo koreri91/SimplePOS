@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.admin.AdminMainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/content_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/item_save_btn"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            >
+
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="45dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_item"
+                        android:layout_width="@dimen/app_large_icon_size"
+                        android:layout_height="@dimen/app_large_icon_size"
+                        android:background="@drawable/selector_gray_dotted"
+                        android:padding="2dp"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/ic_menu_camera" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextContent.Bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="Upload Foto Produk" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/image_upload_btn"
+                            style="@style/Button.LightWhite"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="20dp"
+                            android:text="Pilih Foto" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextContent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="Pindai Barcode" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/app_small_layout_height"
+                        android:background="@drawable/selector_grey_item">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/barcode_btn"
+                            style="@style/Button.LightWhite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="5dp"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginLeft="0dp"
+                            android:text="Pindai" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/barcode_field"
+                            style="@style/TextContent"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/app_default_edit_text"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_toStartOf="@id/barcode_btn"
+                            android:layout_toLeftOf="@id/barcode_btn"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="Barcode"
+                            android:imeOptions="actionNext"
+                            android:inputType="textAutoComplete"
+                            android:paddingStart="@dimen/activity_mini_vertical_margin"
+                            android:paddingLeft="@dimen/activity_mini_vertical_margin"
+                            android:text="@string/appstr_space">
+                            <requestFocus/>
+                        </androidx.appcompat.widget.AppCompatEditText>
+
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextContent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_mini_vertical_margin"
+                        android:layout_marginEnd="@dimen/app_default_padding"
+                        android:layout_marginRight="@dimen/app_default_padding"
+                        android:text="Pindai Barcode untuk memasukkan kode unik yang tertera pada produk kamu" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextContent.Bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/appstr_product_name"
+                        android:imeOptions="actionNext"
+                        android:inputType="textAutoComplete" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/name_field"
+                        style="@style/TextContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/app_mini_edit_text"
+                        android:background="@drawable/selector_edit_text_disabled"
+                        android:hint="@string/appstr_example_product_name"
+                        android:imeOptions="actionNext"
+                        android:inputType="textAutoComplete"
+                        android:paddingStart="@dimen/app_default_padding"
+                        android:paddingLeft="@dimen/app_default_padding" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_product_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/app_default_icon_size"
+                    android:layout_marginTop="@dimen/activity_mini_vertical_margin"
+                    android:layout_marginBottom="@dimen/activity_mini_vertical_margin"
+                    android:clickable="true"
+                    android:background="@drawable/layout_selector_borderless">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@id/arrow_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/app_default_icon_size"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/app_default_padding"
+                        android:paddingLeft="@dimen/app_default_padding"
+                        android:paddingEnd="@dimen/app_default_padding"
+                        android:paddingRight="@dimen/app_default_padding"
+                        android:clickable="false"
+                        app:srcCompat="@drawable/ic_arrow_right" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@id/arrow_right"
+                        android:layout_toLeftOf="@id/arrow_right"
+                        android:clickable="false"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextContent.Bold"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clickable="false"
+                            android:text="@string/appstr_product_category" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/category_product_content"
+                            style="@style/TextContent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:text="Umum" />
+
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"/>
+
+                <RelativeLayout
+                    android:id="@+id/layout_stock_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/app_default_icon_size"
+                    android:layout_marginTop="@dimen/activity_mini_vertical_margin"
+                    android:clickable="true"
+                    android:background="@drawable/layout_selector_borderless">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@id/arrow_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/app_default_icon_size"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/app_default_padding"
+                        android:paddingLeft="@dimen/app_default_padding"
+                        android:paddingEnd="@dimen/app_default_padding"
+                        android:paddingRight="@dimen/app_default_padding"
+                        android:clickable="false"
+                        app:srcCompat="@drawable/ic_arrow_right" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@id/arrow_right"
+                        android:layout_toLeftOf="@id/arrow_right"
+                        android:clickable="false"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextContent.Bold"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clickable="false"
+                            android:text="Stok &amp; Harga" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/quantity_price_content"
+                            style="@style/TextContent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:text="Belum ada stok, -" />
+
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/item_save_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:layout_margin="12dp"
+            android:enabled="false"
+            android:background="@drawable/selector_orange_btn"
+            android:text="Simpan"
+            android:textColor="@android:color/white" />
+
+
+    </RelativeLayout>
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

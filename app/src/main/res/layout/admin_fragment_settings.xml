@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.admin.settings.SettingsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/app_medium_layout_height"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/app_default_padding"
+                android:paddingLeft="@dimen/app_default_padding"
+                android:paddingTop="@dimen/app_medium_padding">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/app_default_icon_size"
+                    android:layout_height="@dimen/app_default_icon_size"
+                    android:clickable="false"
+                    app:srcCompat="@drawable/ic_employee" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/edit_profile"
+                        style="@style/TextContent.Bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/app_default_padding"
+                        android:paddingLeft="@dimen/app_default_padding"
+                        android:text="@string/appstr_change"
+                        android:textColor="@color/light_blue800" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@+id/edit_profile"
+                        android:layout_toLeftOf="@+id/edit_profile"
+                        android:clickable="false"
+                        android:orientation="vertical"
+                        android:paddingStart="@dimen/app_default_padding"
+                        android:paddingLeft="@dimen/app_default_padding">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextContent.Bold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:text="@string/appstr_owner_name" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextContent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:text="@string/appstr_email" />
+
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_grey_item"
+                android:padding="@dimen/app_default_padding"
+                android:text="@string/appstr_general" />
+
+            <LinearLayout
+                android:id="@+id/store_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layout_selector"
+                android:clickable="true"
+                android:orientation="horizontal"
+                android:padding="@dimen/app_default_padding">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/app_default_icon_size"
+                    android:layout_height="@dimen/app_default_icon_size"
+                    android:clickable="false"
+                    app:srcCompat="@drawable/ic_store_settings" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@id/arrow_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/app_default_icon_size"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/app_default_padding"
+                        android:paddingLeft="@dimen/app_default_padding"
+                        android:paddingEnd="@dimen/app_default_padding"
+                        android:paddingRight="@dimen/app_default_padding"
+                        app:srcCompat="@drawable/ic_arrow_right" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@id/arrow_right"
+                        android:layout_toLeftOf="@id/arrow_right"
+                        android:clickable="false"
+                        android:orientation="vertical"
+                        android:paddingStart="@dimen/app_default_padding"
+                        android:paddingLeft="@dimen/app_default_padding">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextContent.Bold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:text="@string/appstr_store_settings" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextContent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:text="@string/appstr_store_settings_desc" />
+
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/reset_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layout_selector"
+                android:clickable="true"
+                android:orientation="horizontal"
+                android:padding="@dimen/app_default_padding">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/app_default_icon_size"
+                    android:layout_height="@dimen/app_default_icon_size"
+                    android:clickable="false"
+                    app:srcCompat="@drawable/ic_smartphone_delete_record" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@id/arrow_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/app_default_icon_size"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/app_default_padding"
+                        android:paddingLeft="@dimen/app_default_padding"
+                        android:paddingEnd="@dimen/app_default_padding"
+                        android:paddingRight="@dimen/app_default_padding"
+                        app:srcCompat="@drawable/ic_arrow_right" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@id/arrow_right"
+                        android:layout_toLeftOf="@id/arrow_right"
+                        android:clickable="false"
+                        android:orientation="vertical"
+                        android:paddingStart="@dimen/app_default_padding"
+                        android:paddingLeft="@dimen/app_default_padding">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextContent.Bold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:text="@string/appstr_reset_data" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextContent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:text="@string/appstr_reset_data_desc" />
+
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_grey_item"
+                android:padding="@dimen/app_default_padding"
+                android:text="@string/appstr_device" />
+
+            <LinearLayout
+                android:id="@+id/printer_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layout_selector"
+                android:clickable="true"
+                android:orientation="horizontal"
+                android:padding="@dimen/app_default_padding">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/app_default_icon_size"
+                    android:layout_height="@dimen/app_default_icon_size"
+                    android:clickable="false"
+                    app:srcCompat="@drawable/ic_printer" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@id/arrow_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/app_default_icon_size"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/app_default_padding"
+                        android:paddingLeft="@dimen/app_default_padding"
+                        android:paddingEnd="@dimen/app_default_padding"
+                        android:paddingRight="@dimen/app_default_padding"
+                        app:srcCompat="@drawable/ic_arrow_right" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@id/arrow_right"
+                        android:layout_toLeftOf="@id/arrow_right"
+                        android:clickable="false"
+                        android:orientation="vertical"
+                        android:paddingStart="@dimen/app_default_padding"
+                        android:paddingLeft="@dimen/app_default_padding">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextContent.Bold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:text="@string/appstr_printer" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextContent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:text="@string/appstr_printer_desc" />
+
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/struct_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layout_selector"
+                android:clickable="true"
+                android:orientation="horizontal"
+                android:padding="@dimen/app_default_padding">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/app_default_icon_size"
+                    android:layout_height="@dimen/app_default_icon_size"
+                    android:clickable="false"
+                    app:srcCompat="@drawable/ic_receipt_curr_dollars" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@id/arrow_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/app_default_icon_size"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/app_default_padding"
+                        android:paddingLeft="@dimen/app_default_padding"
+                        android:paddingEnd="@dimen/app_default_padding"
+                        android:paddingRight="@dimen/app_default_padding"
+                        app:srcCompat="@drawable/ic_arrow_right" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@id/arrow_right"
+                        android:layout_toLeftOf="@id/arrow_right"
+                        android:clickable="false"
+                        android:orientation="vertical"
+                        android:paddingStart="@dimen/app_default_padding"
+                        android:paddingLeft="@dimen/app_default_padding">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextContent.Bold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:text="@string/appstr_receipt" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextContent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:text="@string/appstr_receipt_desc" />
+
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/backup_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layout_selector"
+                android:clickable="true"
+                android:orientation="horizontal"
+                android:padding="@dimen/app_default_padding">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/app_default_icon_size"
+                    android:layout_height="@dimen/app_default_icon_size"
+                    android:clickable="false"
+                    app:srcCompat="@drawable/ic_backup" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@id/arrow_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/app_default_icon_size"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/app_default_padding"
+                        android:paddingLeft="@dimen/app_default_padding"
+                        android:paddingEnd="@dimen/app_default_padding"
+                        android:paddingRight="@dimen/app_default_padding"
+                        app:srcCompat="@drawable/ic_arrow_right" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@id/arrow_right"
+                        android:layout_toLeftOf="@id/arrow_right"
+                        android:clickable="false"
+                        android:orientation="vertical"
+                        android:paddingStart="@dimen/app_default_padding"
+                        android:paddingLeft="@dimen/app_default_padding">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextContent.Bold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:text="@string/appstr_backup_data" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextContent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:text="@string/appstr_backup_data_desc" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_grey_item"
+                android:padding="@dimen/app_default_padding"
+                android:text="@string/appstr_help" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/contact_us"
+                style="@style/TextContent.Bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layout_selector"
+                android:padding="@dimen/app_medium_padding"
+                android:text="@string/appstr_contact_us" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/user_guide"
+                style="@style/TextContent.Bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layout_selector"
+                android:padding="@dimen/app_medium_padding"
+                android:text="@string/appstr_user_guide"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/terms_and_condition"
+                style="@style/TextContent.Bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layout_selector"
+                android:padding="@dimen/app_medium_padding"
+                android:text="@string/appstr_terms_conditions" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/policy_privacy"
+                style="@style/TextContent.Bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layout_selector"
+                android:padding="@dimen/app_medium_padding"
+                android:text="@string/appstr_privacy_policy" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/send_feedback"
+                style="@style/TextContent.Bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layout_selector"
+                android:padding="@dimen/app_medium_padding"
+                android:text="@string/appstr_rate_this_app" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/blue_grey100">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/logout"
+                    android:layout_margin="@dimen/activity_vertical_margin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/layout_selector"
+                    android:padding="@dimen/app_medium_padding"
+                    android:text="@string/appstr_logout"
+                    android:gravity="center" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/Button.FAB"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:text="@string/appstr_logout"
+        android:textColor="@color/white" />
+</RelativeLayout>
+

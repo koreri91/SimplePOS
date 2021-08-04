@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_product_item_rv"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/app_medium_layout_height"
+    android:paddingTop="@dimen/activity_mini_horizontal_margin"
+    android:paddingStart="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_vertical_margin"
+    android:paddingEnd="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_vertical_margin"
+    android:background="@drawable/selector_white">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/photo"
+        android:layout_width="@dimen/app_default_icon_size"
+        android:layout_height="@dimen/app_default_icon_size"
+        android:layout_centerVertical="true"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/ic_product" />
+
+    <LinearLayout
+        android:id="@+id/layout_price"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/price_field"
+            style="@style/TextContentMini.Bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="right|end"
+            android:text="@string/appstr_price" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/sell_btn"
+                style="@style/Button.Order"
+                android:textColor="@color/white"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                android:text="Jual"
+                android:textAllCaps="false" />
+
+            <LinearLayout
+                android:id="@+id/change_quantity_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:visibility="visible"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/app_mini_button_height"
+                    android:layout_height="@dimen/app_mini_button_height"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/activity_mini_horizontal_margin"
+                    app:srcCompat="@drawable/ic_edit_orange"
+                    android:layout_marginRight="@dimen/activity_mini_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_mini_horizontal_margin"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/quantity_minus_btn"
+                    style="@style/Button.Order"
+                    android:layout_width="@dimen/app_mini_edit_text"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/selector_sell_btn"
+                    android:gravity="center"
+                    android:text="-"
+                    android:textColor="@android:color/white" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/quantity_item_count"
+                    android:layout_width="@dimen/app_mini_button_height"
+                    android:layout_height="@dimen/app_mini_button_height"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:paddingStart="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingEnd="5dp"
+                    android:background="@android:color/transparent"
+                    android:text="1"
+                    style="@style/TextContent.Bold"
+                    android:inputType="number"
+                    android:focusableInTouchMode="false"
+                    android:clickable="false"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/quantity_plus_btn"
+                    style="@style/Button.Order"
+                    android:layout_width="@dimen/app_mini_edit_text"
+                    android:layout_gravity="center_vertical"
+                    android:text="+"
+                    android:textColor="@android:color/white"
+                    android:gravity="center"
+                    android:background="@drawable/selector_sell_btn"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/activity_mini_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_mini_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_mini_horizontal_margin"
+        android:layout_marginLeft="@dimen/activity_mini_horizontal_margin"
+        android:layout_toStartOf="@+id/layout_price"
+        android:layout_toLeftOf="@+id/layout_price"
+        android:layout_toEndOf="@+id/photo"
+        android:layout_toRightOf="@+id/photo"
+        android:orientation="vertical"
+        android:paddingStart="5dp"
+        android:paddingLeft="5dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/name_field"
+            style="@style/TextContentMini.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/stock_field"
+            style="@style/TextContentMini"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quantity" />
+    </LinearLayout>
+
+</RelativeLayout>
+
